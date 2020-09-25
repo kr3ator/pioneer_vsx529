@@ -99,8 +99,8 @@ class PioneerDevice(MediaPlayerEntity):
         self._volume = 0
         self._muted = False
         self._selected_source = ""
-        self._source_name_to_number = sources
-        self._source_number_to_name = dict((v, k) for k, v in sources.items())
+        self._source_name_to_number = {"CD":"01", "DVD":"04", "BD":"25", "MHL":"48"}
+        self._source_number_to_name = {"01":"CD", "04":"DVD","25":"BD","48":"MHL"}
         
         self._volume = None
         self._muted = False
